@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAB - Pusat Produk Digital & Edukasi Premium</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --dark-color: #0f172a;
+            --accent-color: #ffc107;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #334155;
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn-custom {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+            color: #fff;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding: 100px 0 80px;
+            position: relative;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .badge-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(13, 110, 253, 0.9);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .price-discount {
+            text-decoration: line-through;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .faq-accordion .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand brand-font fs-3 fw-bold" href="#">DIGITAB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-4">
+                    <li class="nav-item"><a class="nav-link" href="#keunggulan">Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produk">Katalog Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#penulis">Tentang Penulis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+                <a href="https://lynk.id/digitab" target="_blank" class="btn btn-primary-custom btn-custom">Akses Katalog Lynk.id</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 fs-6">Edukasi, AI, & Literasi Digital</span>
+                    <h1 class="display-4 fw-bold mb-4">Upgrade Skill, Ilmu, & Karier Anda Bersama <span class="text-primary">DIGITAB</span></h1>
+                    <p class="lead text-light mb-4 opacity-75">Akses ratusan ebook premium, modul ajar, template interaktif, dan produk digital berbasis riset karya <strong>Agus Gunawan, M.Pd.</strong></p>
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="https://lynk.id/digitab" target="_blank" class="btn btn-primary-custom btn-custom btn-lg">
+                            <i class="fa-solid fa-cart-shopping me-2"></i> Lihat Semua Produk
+                        </a>
+                        <a href="#produk" class="btn btn-outline-light btn-custom btn-lg">Eksplor Kategori</a>
+                    </div>
+                    <div class="d-flex gap-4 fs-6 text-light opacity-75">
+                        <div><i class="fa-solid fa-check-circle text-primary me-2"></i>Akses Selamanya</div>
+                        <div><i class="fa-solid fa-check-circle text-primary me-2"></i>Download Instan</div>
+                        <div><i class="fa-solid fa-check-circle text-primary me-2"></i>Update Berkala</div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="zoom-in">
+                    <img src="https://via.placeholder.com/450x550/1e293b/ffffff?text=Ebook+%26+Digital+Assets" alt="Digitab Banner" class="img-fluid rounded-4 shadow-lg border border-secondary">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEUNGGULAN SECTION -->
+    <section id="keunggulan" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Mengapa Memilih DIGITAB?</h2>
+                <p class="text-muted">Solusi tepat bagi Pendidik, Akademisi, Praktisi, dan Pembelajar Modern.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center h-100">
+                        <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-book-bookmark"></i></div>
+                        <h5>Materi Berkualitas</h5>
+                        <p class="text-muted small mb-0">Disusun berdasarkan riset mendalam, keilmuan ilmiah, dan pengalaman praktis.</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center h-100">
+                        <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-robot"></i></div>
+                        <h5>Integrasi AI</h5>
+                        <p class="text-muted small mb-0">Relevan dengan tuntutan era Artificial Intelligence dan transformasi digital.</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center h-100">
+                        <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-bolt"></i></div>
+                        <h5>Akses Cepat</h5>
+                        <p class="text-muted small mb-0">Setelah transaksi berhasil via Lynk.id, file siap diunduh secara instan.</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card text-center h-100">
+                        <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-layer-group"></i></div>
+                        <h5>Multidisiplin</h5>
+                        <p class="text-muted small mb-0">Mencakup Pendidikan, Bahasa Arab, Parenting, Isim Dhomir, hingga AI Tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK -->
+    <section id="produk" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Katalog Produk Unggulan</h2>
+                <p class="text-muted">Pilih modul atau ebook yang sesuai dengan kebutuhan pengembangan diri Anda.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Produk 1 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <span class="badge-category">Artificial Intelligence</span>
+                            <img src="https://via.placeholder.com/400x250/0d6efd/ffffff?text=AI+dalam+Pendidikan" class="card-img-top" alt="Ebook AI">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5>Panduan AI untuk Pendidik & Akademisi</h5>
+                            <p class="text-muted small flex-grow-1">Pemanfaatan Tools AI masa kini untuk efisiensi mengajar, riset, dan pembuatan modul pembelajaran.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <span class="price-discount">Rp99.000</span>
+                                    <span class="fs-5 fw-bold text-primary d-block">Rp49.000</span>
+                                </div>
+                                <div class="text-warning small"><i class="fa-solid fa-star"></i> 5.0</div>
+                            </div>
+                            <a href="https://lynk.id/digitab" target="_blank" class="btn btn-outline-primary btn-custom w-100">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <span class="badge-category">Bahasa Arab</span>
+                            <img src="https://via.placeholder.com/400x250/198754/ffffff?text=Linguistik+Arab" class="card-img-top" alt="Ebook Bahasa Arab">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5>Pembelajaran Bahasa Arab Modern</h5>
+                            <p class="text-muted small flex-grow-1">Pendekatan aplikatif memahami kaidah Bahasa Arab, Isim Dhomir, dan struktur kalimat dengan mudah.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <span class="price-discount">Rp79.000</span>
+                                    <span class="fs-5 fw-bold text-primary d-block">Rp39.000</span>
+                                </div>
+                                <div class="text-warning small"><i class="fa-solid fa-star"></i> 4.9</div>
+                            </div>
+                            <a href="https://lynk.id/digitab" target="_blank" class="btn btn-outline-primary btn-custom w-100">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produk 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card h-100 d-flex flex-column">
+                        <div class="position-relative">
+                            <span class="badge-category">Parenting & Edukasi</span>
+                            <img src="https://via.placeholder.com/400x250/ffc107/333333?text=Generasi+Bertakwa" class="card-img-top" alt="Ebook Parenting">
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h5>Outline & Strategi Generasi Bertakwa</h5>
+                            <p class="text-muted small flex-grow-1">Panduan mendidik anak di era digital berbasis nilai-nilai Islam, psikologi, dan Neuroscience.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <span class="price-discount">Rp89.000</span>
+                                    <span class="fs-5 fw-bold text-primary d-block">Rp45.000</span>
+                                </div>
+                                <div class="text-warning small"><i class="fa-solid fa-star"></i> 5.0</div>
+                            </div>
+                            <a href="https://lynk.id/digitab" target="_blank" class="btn btn-outline-primary btn-custom w-100">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Katalog Lengkap -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://lynk.id/digitab" target="_blank" class="btn btn-primary-custom btn-custom btn-lg">
+                    <i class="fa-solid fa-grid-2 me-2"></i> Lihat Semua Produk Lengkap di Lynk.id
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG PENULIS -->
+    <section id="penulis" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0 text-center" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/380x450/0f172a/ffffff?text=Agus+Gunawan,+M.Pd." alt="Agus Gunawan M.Pd" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
+                    <span class="text-primary fw-bold text-uppercase">Tentang Founder DIGITAB</span>
+                    <h2 class="fw-bold mb-3">Agus Gunawan, M.Pd.</h2>
+                    <p class="text-muted">Guru • Penulis • Praktisi Pendidikan • AI Educator</p>
+                    <p>Berfokus pada pengembangan bahan ajar modern, integrasi teknologi Artificial Intelligence dalam pendidikan, serta penyusunan modul keilmuan Islam dan Bahasa Arab secara aplikatif.</p>
+                    <p class="mb-4">Lewat DIGITAB, seluruh karya digital seperti ebook, modul, dan template praktis dapat diakses secara langsung oleh ribuan pendidik dan pembelajar di seluruh Indonesia.</p>
+                    <div class="row g-3 text-center">
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-3 border">
+                                <h4 class="fw-bold text-primary mb-0">20+</h4>
+                                <small class="text-muted">Ebook Published</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-3 border">
+                                <h4 class="fw-bold text-primary mb-0">1000+</h4>
+                                <small class="text-muted">Pembaca Active</small>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="p-3 bg-white rounded-3 border">
+                                <h4 class="fw-bold text-primary mb-0">4.9/5</h4>
+                                <small class="text-muted">Rating Pembeli</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Pertanyaan Sering Diajukan (FAQ)</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Bagaimana cara membeli produk digital DIGITAB?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Klik tombol "Beli Sekarang" pada produk yang diinginkan. Anda akan diarahkan ke halaman resmi **Lynk.id/digitab** untuk memilih metode pembayaran (QRIS, E-Wallet, Transfer Bank, dll).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Apakah ebook bisa dibaca melalui HP/Tablet?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, semua berkas dikirim dalam format PDF universal yang bisa dibuka dengan nyaman di HP, Tablet, Laptop, maupun Komputer.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Apakah ada garansi akses selamanya?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Benar, sekali membeli Anda akan memiliki file tersebut sepenuhnya dan dapat diakses kapan saja.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / FINAL CTA -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 mb-4">
+                <div class="col-lg-5">
+                    <h3 class="brand-font fw-bold mb-3">DIGITAB</h3>
+                    <p class="text-light opacity-75">Platform penyedia aset digital, ebook, modul, dan materi edukasi terpercaya karya Agus Gunawan, M.Pd.</p>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-3">Navigasi</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#keunggulan" class="text-light text-decoration-none opacity-75">Keunggulan</a></li>
+                        <li><a href="#produk" class="text-light text-decoration-none opacity-75">Katalog Produk</a></li>
+                        <li><a href="#penulis" class="text-light text-decoration-none opacity-75">Tentang Penulis</a></li>
+                        <li><a href="https://lynk.id/digitab" target="_blank" class="text-light text-decoration-none opacity-75">Lynk.id Official</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h6 class="fw-bold mb-3">Mulai Belajar Sekarang</h6>
+                    <a href="https://lynk.id/digitab" target="_blank" class="btn btn-primary-custom btn-custom">
+                        <i class="fa-solid fa-cart-shopping me-2"></i> Akses Lynk.id Digitab
+                    </a>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-light opacity-50 small">
+                © 2026 DIGITAB by Agus Gunawan, M.Pd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
