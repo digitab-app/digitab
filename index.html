@@ -164,6 +164,55 @@
 .product-card .product-description {
     line-height: 1.7;
 }
+        /* FOTO & INFORMASI FOUNDER SEIMBANG */
+.founder-row {
+    align-items: stretch !important;
+}
+
+.founder-photo {
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+.founder-photo-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.founder-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .founder-photo-wrapper,
+    .founder-content {
+        min-height: 100%;
+    }
+
+    .founder-photo {
+        height: 100%;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 991.98px) {
+    .founder-photo {
+        height: auto;
+        max-height: 550px;
+        object-fit: cover;
+    }
+
+    .founder-photo-wrapper {
+        display: block;
+    }
+}
     </style>
 </head>
 <body>
@@ -1144,44 +1193,119 @@
 </section>
 <!-- END SHOPEE AFFILIATE SECTION -->
 
-    <!-- TENTANG PENULIS -->
-    <section id="penulis" class="py-5">
-        <div class="container py-4">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-4 mb-lg-0 text-center" data-aos="fade-right">
-                    <img src="assets/images/MY PICT.png" alt="Agus Gunawan M.Pd" class="img-fluid rounded-4 shadow">
-                </div>
-                <div class="col-lg-7 ps-lg-5" data-aos="fade-left">
-                    <span class="text-primary fw-bold text-uppercase">Tentang Founder DIGITAB</span>
-                    <h2 class="fw-bold mb-3">Agus Gunawan, M.Pd.</h2>
-                    <p class="text-muted">Guru • Penulis • Praktisi Pendidikan • AI Educator</p>
-                    <p>Berfokus pada pengembangan bahan ajar modern, integrasi teknologi Artificial Intelligence dalam pendidikan, serta penyusunan modul keilmuan Islam dan Bahasa Arab secara aplikatif.</p>
-                    <p class="mb-4">Lewat DIGITAB, seluruh karya digital seperti ebook, modul, dan template praktis dapat diakses secara langsung oleh ribuan pendidik dan pembelajar di seluruh Indonesia.</p>
-                    <div class="row g-3 text-center">
-                        <div class="col-4">
-                            <div class="p-3 bg-white rounded-3 border">
-                                <h4 class="fw-bold text-primary mb-0">20+</h4>
-                                <small class="text-muted">Ebook Published</small>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="p-3 bg-white rounded-3 border">
-                                <h4 class="fw-bold text-primary mb-0">1000+</h4>
-                                <small class="text-muted">Pembaca Active</small>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="p-3 bg-white rounded-3 border">
-                                <h4 class="fw-bold text-primary mb-0">4.9/5</h4>
-                                <small class="text-muted">Rating Pembeli</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- TENTANG PENULIS -->
+<section id="penulis" class="py-5">
 
+    <div class="container py-4">
+
+        <div class="row founder-row g-4">
+
+            <!-- FOTO FOUNDER -->
+            <div class="col-lg-5 founder-photo-wrapper"
+                 data-aos="fade-right">
+
+                <img
+                    src="assets/images/iam.png"
+                    alt="Agus Gunawan, M.Pd."
+                    class="founder-photo shadow"
+                >
+
+            </div>
+
+
+            <!-- INFORMASI FOUNDER -->
+            <div class="col-lg-7 founder-content ps-lg-5"
+                 data-aos="fade-left">
+
+                <span class="text-primary fw-bold text-uppercase">
+                    Tentang Founder DIGITAB
+                </span>
+
+                <h2 class="fw-bold mb-3">
+                    Agus Gunawan, M.Pd.
+                </h2>
+
+                <p class="text-muted">
+                    Guru • Penulis • Praktisi Pendidikan • AI Educator
+                </p>
+
+                <p>
+                    Berfokus pada pengembangan bahan ajar modern,
+                    integrasi teknologi Artificial Intelligence dalam
+                    pendidikan, serta penyusunan modul keilmuan Islam
+                    dan Bahasa Arab secara aplikatif.
+                </p>
+
+                <p class="mb-4">
+                    Lewat DIGITAB, seluruh karya digital seperti ebook,
+                    modul, dan template praktis dapat diakses secara
+                    langsung oleh ribuan pendidik dan pembelajar
+                    di seluruh Indonesia.
+                </p>
+
+
+                <!-- STATISTIK -->
+                <div class="row g-3 text-center">
+
+                    <div class="col-4">
+
+                        <div class="p-3 bg-white rounded-3 border h-100">
+
+                            <h4 class="fw-bold text-primary mb-0">
+                                20+
+                            </h4>
+
+                            <small class="text-muted">
+                                Ebook Published
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-4">
+
+                        <div class="p-3 bg-white rounded-3 border h-100">
+
+                            <h4 class="fw-bold text-primary mb-0">
+                                1000+
+                            </h4>
+
+                            <small class="text-muted">
+                                Pembaca Aktif
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-4">
+
+                        <div class="p-3 bg-white rounded-3 border h-100">
+
+                            <h4 class="fw-bold text-primary mb-0">
+                                4.9/5
+                            </h4>
+
+                            <small class="text-muted">
+                                Rating Pembeli
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
     <!-- FAQ SECTION -->
     <section id="faq" class="py-5 bg-white">
         <div class="container py-4">
